@@ -1,0 +1,20 @@
+Implementation Approach:
+i created my calculator folder in localDisc(c) xammp, htdocs path
+
+1. HTML Form :I  Designed a user-friendly form for inputting numerical values and selecting operations involved in calculation.
+
+PHP Script: I created functions for each calculation type and handled form submission to process and calculate results of the users input.
+
+Data Flow: The form sends data to the PHP script, which performs calculations and redirects back to the form with the result.
+
+
+Testing approach.
+1. In Xammp ensure that apache and MYSql are started.
+
+2. I went to chrome eb browser and entered the path to navigate to m to files calculator.html and calculator.php.
+
+3. In calculator.html file, i entered values in the input fields.
+
+4. I selected an operation by clicking the corresponding button that contain all the operations to be performed to the to values (a,b).
+
+5. The result displayed on the page.

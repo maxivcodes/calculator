@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px;background-color: chocolate; }
+        .calculator { max-width: 400px; margin: 0 auto; }
+        input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; margin: 7px; border-radius: 10%;  }
+        .result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator application</h1>
+        <form action="calculator.php" method="post">
+            <input type="text" name="value1" placeholder="Enter first value" required>
+            <input type="text" name="value2" placeholder="Enter second value ">
+            <div>
+                <button type="submit" name="operation" value="add">Add</button>
+                <button type="submit" name="operation" value="subtract">Subtract</button>
+                <button type="submit" name="operation" vsalue="multiply">Multiply</button>
+                <button type="submit" name="operation" value="divide">Divide</button>
+                <button type="submit" name="operation" value="exponentiate">Exponentiate</button>
+                <button type="submit" name="operation" value="percentage">Percentage</button>
+                <button type="submit" name="operation" value="sqrt">Square Root</button>
+                <button type="submit" name="operation" value="log">Logarithm</button>
+            </div>
+        </form>
+        <div class="result">
+            <?php
+            if (isset($_GET['result'])) {
+                echo "Result: " . htmlspecialchars($_GET['result']);
+            }
+            ?>
+        </div>
+    </div>
+</body>
+</html>
